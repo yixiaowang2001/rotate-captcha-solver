@@ -1,0 +1,7 @@
+.DS_Store
+imgs/raw_train_imgs
+imgs/raw_test_imgs
+imgs/raw_val_imgs
+models
+.idea
+__pycache__
