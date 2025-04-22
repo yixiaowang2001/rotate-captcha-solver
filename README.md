@@ -1,4 +1,6 @@
-# 旋转图片角度识别 rotate-captcha-solver
+# Rotate-Captcha-Solver: 旋转图片角度识别
+
+中文 | [English](README_en.md)
 
 ## 1 项目简介
 
@@ -20,7 +22,7 @@
   <img src="readme_imgs/pipeline.png">
 </div>
 
-### 2.1 预数据处理
+### 2.1 数据处理
 
 - 采用[COCO数据集](https://www.kaggle.com/datasets/awsaf49/coco-2017-dataset/data)作为基础，对20000张原始训练图片，每张施加5个随机角度旋转，构造训练集。
 - 使用回归任务（直接预测角度）训练模型。
@@ -111,18 +113,18 @@ pip install -r requirements.txt
 # 项目结构
 rotate-captcha-solver
 ├── caps                     # 百度验证码图片数据
-│   ├── raw_labeled_caps     # 人工标注的百度验证码图片
-│   ├── unlabeled_caps       # 未标注的百度验证码图片
+│    ├── raw_labeled_caps    # 人工标注的百度验证码图片
+│    └── unlabeled_caps      # 未标注的百度验证码图片
 ├── imgs                     # COCO图片数据
-│   ├── test                 # COCO测试集
-│   ├── train                # COCO训练集
-│   └── val                  # COCO验证集
+│    ├── test                # COCO测试集
+│    ├── train               # COCO训练集
+│    └── val                 # COCO验证集
 ├── models                   # 训练好的模型
 ├── readme_imgs              # README说明图片
 ├── utils                    # 工具函数
-│   ├── crawler_utils.py     # 爬虫网页相关工具
-│   ├── image_utils.py       # 图像处理相关工具
-│   └── model_utils.py       # 模型相关工具（可以修改模型结构、mask等）
+│    ├── crawler_utils.py    # 爬虫网页相关工具
+│    ├── image_utils.py      # 图像处理相关工具
+│    └── model_utils.py      # 模型相关工具（可以修改模型结构、mask等）
 ├── download_caps.py         # 下载验证码图片
 ├── evaluate.py              # 评估
 ├── finetune.py              # 微调
